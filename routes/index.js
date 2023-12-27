@@ -1,11 +1,13 @@
-import express from 'express';
+const express = require('express');
 //import FrutaController from '../controller/fruta.controller.js';
 
 const router = express.Router();
 
-router.get('/frutas/:id', FrutaController.getFrutasById)
-router.post('/frutas', FrutaController.createFrutas)
-router.put('/frutas/:id', FrutaController.updateFruta)
-router.delete('/frutas/:id', FrutaController.deleteFruta)
+router.get('/products/:id', () => {})
+router.post('/products', () => {})
+router.put('/products/:id', () => {})
+router.delete('/products/:id', () => {})
 
-export default router
+module.exports = {
+  router
+};

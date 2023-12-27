@@ -3,16 +3,15 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('products', table => {
+  return knex.schema.createTable('products', (table) => {
     table.increments('id');
     table.string('nombre').notNullable().unique();
-    table.string('descripcion');
     table.string('categoría');
-    table.enum('cantidad').unsigned().notNullable();
+    table.string('descripcion');
+    table.integer('cantidad').unsigned().notNullable();
     table.decimal('precio', 10, 3);
     table.boolean('is_active');
-  })
-  
+  });
 };
 
 /**
