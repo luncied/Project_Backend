@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production'){
 }
 const USER = String(process.env.DB_USER);
 const PASSWORD = String(process.env.DB_PASSWORD);
+const URI = String(process.env.URI);
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -14,11 +15,7 @@ module.exports = {
   development: {
     client: 'pg',
     useNullAsDefault: true,
-    connection: {
-      database: 'Backend-eCommerce',
-      user: USER, 
-      password: PASSWORD, 
-    },
+    connection: URI,
     pool: {
       min: 2,
       max: 10
