@@ -25,11 +25,11 @@ El backend tiene un deploy en Cyclic. Para acceder al backend, tenemos que hacer
 Con el método POST podemos crear nuevos productos colocando en el body la siguiente estructura JSON:
 ``` JSON
 {
-		"nombre":"<Nombre del producto>",
-		"categoria":"<Nombre de la categoria del producto>",
-		"descripcion":"<Descripcion del producto>",
-		"cantidad":"<Stock del producto>",
-		"precio":"<Precio del producto>"
+	"nombre":"<Nombre del producto>",
+	"categoria":"<Nombre de la categoria del producto>",
+	"descripcion":"<Descripcion del producto>",
+	"cantidad":"<Stock del producto>",
+	"precio":"<Precio del producto>"
 }
 ```
 Regresa el numero de **id** asignado al nuevo producto
@@ -45,8 +45,8 @@ Con el método DELETE cambiamos la propiedad **`{ "is_active" : "false" }`** par
 
 ## Enpoints
 
-GET - `/api/products/` :  Regresa todos los productos de la base de datos
-GET - `/api/products/:id` :  Regresa el producto por id 
-POST - `/api/products/` :  Es necesario un objeto en el body. Crea un nuevo producto en la base de datos
-PUT - `/api/products/:id` :  Es necesario un objeto en el body con los atributos a modificar. Modifica el producto por id
-DELETE - `/api/products/:id` :  Elimina un producto por id.
+- GET - `/api/products/` :  Regresa todos los productos de la base de datos
+- GET - `/api/products/:id` :  Regresa el producto por id 
+- POST - `/api/products/` :  Es necesario un objeto en el body. Crea un nuevo producto en la base de datos
+- PUT - `/api/products/:id` :  Es necesario un objeto en el body con los atributos a modificar. Modifica el producto por id
+- DELETE - `/api/products/:id` :  Elimina un producto por id.
