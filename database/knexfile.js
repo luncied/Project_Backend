@@ -3,8 +3,7 @@ const dotenv = require('dotenv');
 if (process.env.NODE_ENV !== 'production'){
   dotenv.config({path:__dirname+'/../.env'});
 }
-const USER = String(process.env.DB_USER);
-const PASSWORD = String(process.env.DB_PASSWORD);
+
 const URI = String(process.env.URI);
 
 /**

@@ -17,6 +17,7 @@ class ProductDAO {
   async getProducts () {
     const productsList = await db( 'products' )
       .select( '*' )
+      .where({ 'is_active':'true' })
       .orderBy( 'id', 'asc' )
     return productsList;
   };
@@ -25,6 +26,7 @@ class ProductDAO {
     const product = await db( 'products' )
       .select( '*' )
       .where({ id })
+      .where({ 'is_active':'true' })
       .first()
     return product
   };
@@ -39,7 +41,8 @@ class ProductDAO {
   async deleteProduct ( id ) {
     await db( 'products' )
       .where({ id })
-      .del()
+      .where({ 'is_active':'true' })
+      .update({ 'is_active':'false' })
     return true;
   };
 };
