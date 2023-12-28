@@ -1,7 +1,6 @@
 // Update with your config settings.
-const dotenv = require('dotenv');
 if (process.env.NODE_ENV !== 'production'){
-  dotenv.config({path:__dirname+'/../.env'});
+  require("dotenv").config({path:__dirname+'/../.env'});
 }
 
 const URI = String(process.env.URI);
